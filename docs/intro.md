@@ -97,5 +97,12 @@ It could help to know about:
 - Functional programming
 - [highlandJS](http://highlandjs.org/) or working with streams in general
 - [CommanderJS](https://github.com/tj/commander.js/) or basis for the CLI
+- [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 Or just work with us on filepress and expand your knowledge.
+
+## Another site generator
+
+This project was first started by [Hendrik](https://github.com/HoverBaum) and is greatly inspired by [hexo](https://hexo.io/) and [metalsmith](http://www.metalsmith.io/).
+
+> Fully aware that many such generators exist I wanted one that runs on JS as that is what I am familiar with. I greatly like how hexo is easy to use with the CLI and how metalsmith can be configured programmatically. So I want to bring those two things together and then build even further. I also just like to build things myself ^^
