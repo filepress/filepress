@@ -1,0 +1,28 @@
+{
+  "name": "filepress",
+  "version": "0.1.0",
+  "description": "Static blog and website generator.",
+  "main": "lib/filepress.js",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
+    "highland": "^2.9.0",
+    "highlight.js": "^9.4.0",
+    "markdown-it": "^6.0.5",
+    "yamljs": "^0.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filepress/filepress.git"
+  },
+  "author": "Hendrik Wallbaum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filepress/filepress/issues"
+  },
+  "homepage": "https://github.com/filepress/filepress#filepress"
+}
