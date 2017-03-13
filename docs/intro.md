@@ -2,6 +2,8 @@
 
 This is to provide an entry into filepress development.
 
+The name filepress references old time [letterpresses](https://en.wikipedia.org/wiki/Letterpress_printing). Before they were used to form letters into books. Now filepress is used to form files into blogs.
+
 ## Basics
 
 filepress processes all markdown files in a given source folder and then does the following with these:
