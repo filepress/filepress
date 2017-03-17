@@ -4,6 +4,7 @@ const path = require('path')
 const cli = require('commander')
 const packageInfo = require('./../package.json')
 const settings = require('../lib/settings')
+const logger = require('./logger')
 
 cli
 	.version(packageInfo.version)
@@ -37,10 +38,9 @@ if(cli.mode) {
  */
 function modeCatch(e, modeName) {
 	if(e.code === 'MODULE_NOT_FOUND') {
-		console.log(`The mode you tried to use (${modeName}) could not be found. Please make sure it is installed.`)
+		logger.log(`The mode you tried to use (${modeName}) could not be found. Please make sure it is installed.`)
 	} else {
-		console.log('An unhandled error occured.\nYou might find help at https://github.com/filepress/filepress/issues')
-		console.log(e)
+		logger.error(e, {context: 'loading a mode.'})
 	}
 	process.exit(1)
 }

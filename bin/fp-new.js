@@ -5,6 +5,7 @@ const path = require('path')
 const packageInfo = require('./../package.json')
 const settings = require('../lib/settings')
 const fs = require('fs-extra')
+const logger = require('./logger')
 
 cli
     .version(packageInfo.version)
@@ -18,6 +19,10 @@ cli
 		}
 		createNewSourceFile(layout, name)
     })
+	.on('--help', () => {
+		console.log(`Run "fp new title" to create a new ${settings.defaultLayout} named "title".`)
+		console.log(`For longer names with spaces in them make sure to surround the title with "s.`)
+	})
     .parse(process.argv)
 
 /**
@@ -27,6 +32,7 @@ cli
  *   @return {[type]}        [description]
  */
 function createNewSourceFile(layout, name) {
+	return
 	const data = `---
 layout: ${layout}
 title: ${name}
@@ -35,8 +41,7 @@ title: ${name}
 `
 	const filePath = path.join(process.cwd(), cli.draft ? settings.draftFolder : settings.sourceFolder, (layout === 'page') ? '.' : layout + 's', name + '.md')
 	fs.outputFile(filePath, data, 'utf-8', (err) => {
-		//TODO errorhandling
-		if(err) throw err
+		if(err) logger.error(err, {context: 'creating a new source file.'})
 		console.log(`Successfully created "${name}"`)
 	})
 }
