@@ -83,6 +83,14 @@ const logger = (indents) => (obj) => {
 }
 ```
 
+## Modes and themes
+
+*Modes* are what we call a using of filepress. An arranging of transforms if you so will.
+
+Filepress provides a simple default mode to generate a blog. Other modes can be installed via npm. Modes are encouraged to be published as fp-mode-[mode name]. Modes should export any transforms they are using to the outside. (not yet sure about a best practice here)
+
+Themes or templates are in a way just another transform but one that will be more present to our users. A Mode may provide a standard theme to go with it and usually a theme will have a specific mode it is made for as data needed by the theme needs to be generated thus the right transforms need to be present. However it could be thinkable that a theme works for multiple modes or that a mode has multiple themes.
+
 ## Recommended reading
 
 You should know about or check out:

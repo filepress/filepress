@@ -12,11 +12,24 @@ If you are interested in helping out or just wanna hang out come and join https:
 
 At this point we really are at the starting line. Things that we will definitely do include:
 
-- Build a CI
-- Clean up code and naming
-- Standard theme
+- [ ] Build a CI
+	- [x] General structure
+	- [x] Generator script
+		- [x] mode option
+	- [ ] Manage modes
+	- [ ] init Project
+	- [ ] create markdown file
+	- [ ] local preview
+		- [ ] With live-reload
+- [ ] Settings
+	- [ ] Path configurable (final URL)
+- [ ] Standard theme
+- [ ] Advanced logging
 - Document everything
-- Automated testing (tape)
+- [ ] Automated testing (tape)
+	- [ ] Be happy with manual testing
+	- [ ] Core transforms
+	- [ ] CI
 - Discuss if things are done the best way
 
 Stuff for later:

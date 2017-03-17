@@ -1,0 +1,7 @@
+# General information
+title: filepress blog
+author: filepress
+
+mode: default
+sourceFolder: source
+destinationFolder: dist
