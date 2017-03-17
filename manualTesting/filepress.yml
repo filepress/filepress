@@ -2,6 +2,9 @@
 title: filepress blog
 author: filepress
 
+# Static site generation
 mode: default
 sourceFolder: source
 destinationFolder: dist
+draftFolder: draft
+defaultLayout: post
