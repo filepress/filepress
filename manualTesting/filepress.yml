@@ -8,3 +8,4 @@ sourceFolder: source
 destinationFolder: dist
 draftFolder: draft
 defaultLayout: post
+templatesFolder: templates

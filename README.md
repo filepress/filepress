@@ -18,7 +18,7 @@ At this point we really are at the starting line. Things that we will definitely
 		- [x] mode option
 	- [ ] Manage modes
 	- [ ] init Project
-	- [ ] create markdown file
+	- [x] create markdown file
 	- [ ] local preview
 		- [ ] With live-reload
 - [ ] Settings
