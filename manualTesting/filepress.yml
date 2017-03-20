@@ -3,7 +3,7 @@ title: filepress blog
 author: filepress
 
 # Static site generation
-mode: default
+frame: default
 sourceFolder: source
 destinationFolder: dist
 draftFolder: draft

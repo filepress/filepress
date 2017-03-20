@@ -15,8 +15,8 @@ At this point we really are at the starting line. Things that we will definitely
 - [ ] Build a CI
 	- [x] General structure
 	- [x] Generator script
-		- [x] mode option
-	- [ ] Manage modes
+		- [x] Frame option
+	- [ ] Manage Frames
 	- [ ] init Project
 	- [x] create markdown file
 	- [ ] local preview

@@ -10,39 +10,40 @@ cli
 	.version(packageInfo.version)
 	.usage('[options]')
 	.description('Create static files.')
-	.option('-m, --mode <mode>', 'Specifiy installed mode other than settings or local file to use.')
+	.option('-f, --frame <Frame>', 'Specifiy installed Frame other than settings or local file to use.')
 	.parse(process.argv)
 
-//Require mode specified by option or settings.
-let mode
-if(cli.mode) {
+//Require frame specified by option or settings.
+let frame
+if(cli.frame) {
 	try {
-		mode = require(path.join(process.cwd(), cli.mode))
+		frame = require(path.join(process.cwd(), cli.frame))
 	} catch (e) {
-		modeCatch(e, cli.mode)
+		frameCatch(e, cli.frame)
 	}
 } else {
-	const modeName = (settings.mode !== undefined && settings.mode !== 'default') ? settings.mode : './defaultMode'
+	const frameName = (settings.frame !== undefined && settings.frame !== 'default') ? settings.frame : './defaultFrame'
 	try {
-		mode = require(modeName)
+		frame = require(frameName)
 	} catch (e) {
-		modeCatch(e, modeName)
+		frameCatch(e, frameName)
 	}
 
 }
 
 /**
- *   Handling errors while trying to load a mode.
+ *   Handling errors while trying to load a frame.
  *   @param  {Error} e
- *   @param  {String} modeName
+ *   @param  {String} frameName
  */
-function modeCatch(e, modeName) {
+function frameCatch(e, frameName) {
+	console.log(e);
 	if(e.code === 'MODULE_NOT_FOUND') {
-		logger.log(`The mode you tried to use (${modeName}) could not be found. Please make sure it is installed.`)
+		logger.log(`The frame you tried to use (${frameName}) could not be found. Please make sure it is installed.`)
 	} else {
-		logger.error(e, {context: 'loading a mode.'})
+		logger.error(e, {context: 'loading a frame.'})
 	}
 	process.exit(1)
 }
 
-mode()
+frame()
