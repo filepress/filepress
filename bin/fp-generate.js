@@ -18,6 +18,7 @@ let frame
 if(cli.frame) {
 	try {
 		frame = require(path.join(process.cwd(), cli.frame))
+		logger.debug(`Loading CLI provided frame: ${cli.frame}`)
 	} catch (e) {
 		frameCatch(e, cli.frame)
 	}
@@ -25,6 +26,7 @@ if(cli.frame) {
 	const frameName = (settings.frame !== undefined && settings.frame !== 'default') ? settings.frame : './defaultFrame'
 	try {
 		frame = require(frameName)
+		logger.debug(`Loading frame: ${frameName}`)
 	} catch (e) {
 		frameCatch(e, frameName)
 	}
@@ -37,7 +39,6 @@ if(cli.frame) {
  *   @param  {String} frameName
  */
 function frameCatch(e, frameName) {
-	console.log(e);
 	if(e.code === 'MODULE_NOT_FOUND') {
 		logger.log(`The frame you tried to use (${frameName}) could not be found. Please make sure it is installed.`)
 	} else {

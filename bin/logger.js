@@ -14,6 +14,7 @@
 const path = require('path')
 const packageInfo = require('./../package.json')
 const fs = require('fs')
+const settings = require('../lib/settings')
 
 const errorLogPath = path.resolve(path.join(process.cwd(), 'error.log'))
 
@@ -36,6 +37,12 @@ logger.error = (msg, data = {}) => {
 		//End once an error was received.
 		process.exit(1)
 	})
+}
+
+logger.debug = (msg, data = {}) => {
+	if(!process.env.DEBUG || process.env.DEBUG !== 'true') return
+	console.log(msg)
+	console.log(`Debug data:`, data)
 }
 
 module.exports = logger

@@ -32,7 +32,6 @@ cli
  *   @return {[type]}        [description]
  */
 function createNewSourceFile(layout, name) {
-	return
 	const data = `---
 layout: ${layout}
 title: ${name}
@@ -40,6 +39,11 @@ title: ${name}
 
 `
 	const filePath = path.join(process.cwd(), cli.draft ? settings.draftFolder : settings.sourceFolder, (layout === 'page') ? '.' : layout + 's', name + '.md')
+	logger.debug(`Creating a new markdown file`, {
+		layout,
+		name,
+		filePath
+	})
 	fs.outputFile(filePath, data, 'utf-8', (err) => {
 		if(err) logger.error(err, {context: 'creating a new source file.'})
 		console.log(`Successfully created "${name}"`)
