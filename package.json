@@ -4,10 +4,12 @@
   "description": "Static blog and website generator.",
   "main": "lib/filepress.js",
   "dependencies": {
+    "chokidar": "^1.6.1",
     "commander": "^2.9.0",
     "fs-extra": "^0.30.0",
     "highland": "^2.9.0",
     "highlight.js": "^9.4.0",
+    "live-server": "^1.2.0",
     "markdown-it": "^6.0.5",
     "yamljs": "^0.2.7"
   },

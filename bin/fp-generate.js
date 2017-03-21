@@ -5,12 +5,14 @@ const cli = require('commander')
 const packageInfo = require('./../package.json')
 const settings = require('../lib/settings')
 const logger = require('./logger')
+const chokidar = require('chokidar')
 
 cli
 	.version(packageInfo.version)
 	.usage('[options]')
 	.description('Create static files.')
 	.option('-f, --frame <Frame>', 'Specifiy installed Frame other than settings or local file to use.')
+	.option('-w, --watch', 'Watch source files for change and generate again.')
 	.parse(process.argv)
 
 //Require frame specified by option or settings.
@@ -33,6 +35,14 @@ if(cli.frame) {
 
 }
 
+frame()
+
+if(cli.watch) {
+	chokidar.watch('.', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
+  		frame()
+	})
+}
+
 /**
  *   Handling errors while trying to load a frame.
  *   @param  {Error} e
@@ -46,5 +56,3 @@ function frameCatch(e, frameName) {
 	}
 	process.exit(1)
 }
-
-frame()

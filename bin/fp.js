@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const cli = require('commander')
-const packageInfo = require('./../package.json')
+const packageInfo = require('../package.json')
 const logger = require('./logger')
 
 cli
