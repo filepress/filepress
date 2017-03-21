@@ -19,8 +19,8 @@ At this point we really are at the starting line. Things that we will definitely
 	- [ ] Manage Frames
 	- [ ] init Project
 	- [x] create markdown file
-	- [ ] local preview
-		- [ ] With live-reload
+	- [x] local preview
+		- [ x With live-reload
 - [ ] Settings
 	- [ ] Path configurable (final URL)
 - [ ] Standard theme

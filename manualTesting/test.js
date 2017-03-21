@@ -13,11 +13,12 @@ const logger = (indents) => (obj) => {
     return obj
 }
 
+module.exports = function() {
 filepress('./source')
     .use(frontmatter())
     .use(markdown())
     .use(layouts())
-	.use(logger(4))
+//	.use(logger(4))
     .use(write('./dist'))
 	.collect()
 	.use(buildIndex())
@@ -25,3 +26,4 @@ filepress('./source')
 	.use(write('./dist'))
 	.use(layouts())
 	.end()
+}

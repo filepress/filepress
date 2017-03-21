@@ -14,12 +14,11 @@ cli
 	.option('-w, --watch', 'Watch source files for change and generate again.')
 	.parse(process.argv)
 
-const cliFrame = (cli.frame !== undefined) ? path.join(process.cwd(), cli.frame) : false
-
 logger.log(`Starting generator...`)
 logger.debug(`CLI provided generator settings:`, {
 	frame: cli.frame,
-	cliFrame,
 	watch: cli.watch
 })
-generator(cliFrame ? cliFrame : generator.standardFrame, cli.watch)
+
+//Call the generator with supplied values from CLI.
+generator(cli.frame ? cli.frame : generator.standardFrame, cli.watch)
