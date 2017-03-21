@@ -9,3 +9,7 @@ destinationFolder: dist
 draftFolder: draft
 defaultLayout: post
 templatesFolder: templates
+
+#Prefix variables with ":" to create a template.
+#Permalinks for blogposts
+postLinks: posts/:year/:month/:day/:title

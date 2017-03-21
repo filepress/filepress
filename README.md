@@ -20,15 +20,16 @@ At this point we really are at the starting line. Things that we will definitely
 	- [ ] init Project
 	- [x] create markdown file
 	- [x] local preview
-		- [ x With live-reload
-- [ ] Settings
-	- [ ] Path configurable (final URL)
+		- [x] With live-reload
+- [x] Settings
+	- [x] Path configurable (final URL, permalinks)
 - [ ] Standard theme
 - [ ] Advanced logging
 - Document everything
 - [ ] Automated testing (tape)
 	- [ ] Be happy with manual testing
 	- [ ] Core transforms
+	- [ ] Core utils
 	- [ ] CI
 - Discuss if things are done the best way
 
