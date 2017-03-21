@@ -2,7 +2,6 @@
 
 const cli = require('commander')
 const packageInfo = require('../package.json')
-const logger = require('./logger')
 
 cli
 	.version(packageInfo.version)

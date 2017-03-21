@@ -5,7 +5,7 @@ const path = require('path')
 const packageInfo = require('./../package.json')
 const settings = require('../lib/settings')
 const fs = require('fs-extra')
-const logger = require('./logger')
+const logger = require('../lib/util//logger')
 
 cli
     .version(packageInfo.version)

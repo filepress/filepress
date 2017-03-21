@@ -3,7 +3,7 @@
 const cli = require('commander')
 const packageInfo = require('../package.json')
 const settings = require('../lib/settings')
-const logger = require('./logger')
+const logger = require('../lib/util/logger')
 const liveServer = require('live-server')
 
 /*
@@ -19,7 +19,7 @@ option to run generate using an observation on the source files
  	.parse(process.argv)
 
 if(cli.generate) {
-	
+
 }
 
 logger.log('Starting local server...')
