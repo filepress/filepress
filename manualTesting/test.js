@@ -14,16 +14,16 @@ const logger = (indents) => (obj) => {
 }
 
 module.exports = function() {
-filepress('./source')
-    .use(frontmatter())
-    .use(markdown())
-    .use(layouts())
-//	.use(logger(4))
-    .use(write('./dist'))
-	.collect()
-	.use(buildIndex())
-	.seperate()
-	.use(write('./dist'))
-	.use(layouts())
-	.end()
+	filepress('./source')
+	    .use(frontmatter())
+	    .use(markdown())
+	    .use(layouts())
+	//	.use(logger(4))
+	    .use(write('./dist'))
+		.collect()
+		.use(buildIndex())
+		.seperate()
+		.use(write('./dist'))
+		.use(layouts())
+		.end()
 }

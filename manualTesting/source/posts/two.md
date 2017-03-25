@@ -8,3 +8,8 @@ And even more.
 Yeah out of ideas and so.
 
 You can change this.
+
+<!-- more -->
+
+
+This is the full text of the post and should be hidden on index.
