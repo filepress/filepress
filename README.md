@@ -26,7 +26,7 @@ At this point we really are at the starting line. Things that we will definitely
 	- [x] permalinks
 	- [x] buildIndex
 	- [ ] layouts
-	- [ ] archive page
+	- [x] archive page
 	- [ ] tags page
 - [ ] Advanced logging
 - Document everything
