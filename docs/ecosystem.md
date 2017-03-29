@@ -31,3 +31,5 @@ As themes are no Node modules we however choose to publish them using [GitHub](h
 ```
 fp-theme-[name of theme]
 ```
+
+Themes are required to provide at least a `layouts` folder which holds layouts if they are to be used with the default themes transform.

@@ -7,8 +7,11 @@ frame: default
 sourceFolder: source
 destinationFolder: dist
 draftFolder: draft
+
+# Themes
 defaultLayout: post
-templatesFolder: templates
+themesFolder: themes
+theme: standard
 
 #Prefix variables with ":" to create a template.
 #Permalinks for blogposts
