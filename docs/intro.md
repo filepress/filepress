@@ -44,12 +44,15 @@ There are also some build in transformations:
 
 ## Transformations
 
-Transformations will likely want to be functions that take configuration parameters and return function. The function ultimately returned should accept a [blob] and return one. Inbetween doing any transformation. This could for example be the extraction of frontmatter or the parsing of markdown content into html.
+Transformations will likely want to be functions that take configuration parameters and return function. The function ultimately returned should accept a [blob] and return one. In between doing any transformation. This could for example be the extraction of frontmatter or the parsing of markdown content into html.
+
+Transforms will receive each object on the stream in turn as well as an object containing information about the site that is being generated.
+Transforms may return a single object or an array of objects which will be split into the contained objects for all following transforms.
 
 A simple logger would look like this:
 
 ```javascript
-const logger = (obj) => {
+const logger = () => (obj) => {
 
 	//Log any object processed.
 	console.log(obj)
