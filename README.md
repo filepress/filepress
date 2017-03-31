@@ -25,7 +25,7 @@ At this point we really are at the starting line. Things that we will definitely
 - [ ] Work on core transforms
 	- [x] permalinks
 	- [x] buildIndex
-	- [ ] layouts
+	- [x] themes
 	- [x] archive page
 	- [ ] tags page
 - [ ] Advanced logging

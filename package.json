@@ -10,7 +10,8 @@
     "highland": "^2.9.0",
     "highlight.js": "^9.4.0",
     "live-server": "^1.2.0",
-    "markdown-it": "^6.0.5",
+    "markdown-it": "^6.1.1",
+    "markdown-it-emoji": "^1.3.0",
     "yamljs": "^0.2.7"
   },
   "devDependencies": {},
