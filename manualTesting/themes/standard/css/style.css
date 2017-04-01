@@ -71,6 +71,7 @@ body .blog {
   min-height: 64px;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 .blog .mdl-card__supporting-text strong {
   font-weight: 500;
@@ -358,4 +359,7 @@ body .blog {
 .copyright {
   text-align: center;
   flex-grow: 1;
+}
+.content-wrapper {
+  max-width: 512px;
 }
