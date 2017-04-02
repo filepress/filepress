@@ -4,6 +4,10 @@ date: 2017-03-13 14:59:07
 layout: post
 ---
 
+An illustration of typographic and markdown based features.
+
+<!-- more -->
+
 # Header 1
 
 ## Header 2
