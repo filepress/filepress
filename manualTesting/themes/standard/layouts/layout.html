@@ -19,33 +19,37 @@
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-blue.min.css" />
 	<link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-	${page.content}
-	<footer class="mdl-mini-footer">
-		<div class="mdl-mini-footer--left-section">
-			<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+	<div class="blog blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+		<main class="mdl-layout__content">
+			${page.content}
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer--left-section">
+					<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
 	  			<span class="visuallyhidden">Twitter</span>
 			</button>
-			<button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+					<button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
 	  			<span class="visuallyhidden">Facebook</span>
 			</button>
-			<button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+					<button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
 	  			<span class="visuallyhidden">Google Plus</span>
 			</button>
-		</div>
-		<div class="copyright">
-			(c) filepress - Powered by <a href="https://github.com/filepress/filepress">filepress</a>
-		</div>
-		<div class="mdl-mini-footer--right-section">
-			<button class="mdl-mini-footer--social-btn social-btn__share">
+				</div>
+				<div class="copyright">
+					(c) filepress - Powered by <a href="https://github.com/filepress/filepress">filepress</a>
+				</div>
+				<div class="mdl-mini-footer--right-section">
+					<button class="mdl-mini-footer--social-btn social-btn__share">
 	  			<i class="material-icons" role="presentation">share</i>
 	  			<span class="visuallyhidden">share</span>
 			</button>
-		</div>
-	</footer>
-</main>
-<div class="mdl-layout__obfuscator"></div>
-</div>
+				</div>
+			</footer>
+		</main>
+		<div class="mdl-layout__obfuscator"></div>
+	</div>
 	<script src="/js/material.min.js"></script>
 </body>
+
 </html>

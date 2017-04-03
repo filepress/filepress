@@ -1,57 +1,54 @@
-<div class="blog blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-	<main class="mdl-layout__content">
-		<div class="back">
-			<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/index.html" title="go back" role="button">
-				<i class="material-icons" role="presentation">arrow_back</i>
-			</a>
-		</div>
-		<div class="blog__posts mdl-grid">
-			<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<div class="back">
+	<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/index.html" title="go back" role="button">
+		<i class="material-icons" role="presentation">arrow_back</i>
+	</a>
+</div>
+<div class="blog__posts mdl-grid">
+	<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-				<!-- Add header image here by finding the first, if any image in the pages content -->
-				<div class="mdl-card__media mdl-color-text--grey-50" style="${(() => {
+		<!-- Add header image here by finding the first, if any image in the pages content -->
+		<div class="mdl-card__media mdl-color-text--grey-50" style="${(() => {
 					if(page.headerImage) return `background-image: url(${page.headerImage})`
-					let regex=/<img[\s\S]*src="(.*)"[\s\s]*?>/
+					let regex=/<\s*?img\s+[^>]*?\s*src\s*=\s*["']([^"']+)["'][^>]*?>/
 					return (regex.exec(page.content) === null) ? '' : `background-image: url(${regex.exec(page.content)[1]})`
 				})()}">
-					<h3>${page.title}</h3>
-				</div>
-				<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-					<div class="minilogo"></div>
-					<div>
-						<strong>${site.author}</strong>
-						<span>${page.day}.${page.month}.${page.year}</span>
-					</div>
-					<div class="section-spacer"></div>
-				</div>
-				<div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-					<div class="content-wrapper">
-							${page.content}
-					</div>
-
-				</div>
-
+			<h3>${page.title}</h3>
+		</div>
+		<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+			<div class="minilogo"></div>
+			<div>
+				<strong>${site.author}</strong>
+				<span>${page.day}.${page.month}.${page.year}</span>
+			</div>
+			<div class="section-spacer"></div>
+		</div>
+		<div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+			<div class="content-wrapper">
+				${page.content}
 			</div>
 
-			<nav class="nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-				${(page.previousPostLink !== undefined) ? `
-					<a href="${page.previousPostLink}" class="nav__button">
-						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+		</div>
+
+	</div>
+
+	<nav class="nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+		${(page.previousPostLink !== undefined) ? `
+		<a href="${page.previousPostLink}" class="nav__button">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
 							<i class="material-icons">arrow_back</i>
 			  			</button> Newer
-					</a>
-				` : ''}
+		</a>
+		` : ''}
 
-				<div class="section-spacer"></div>
+		<div class="section-spacer"></div>
 
-				${(page.nextPostLink !== undefined) ? `
-					<a href="${page.nextPostLink}" class="nav__button">
+		${(page.nextPostLink !== undefined) ? `
+		<a href="${page.nextPostLink}" class="nav__button">
 			  			Older
 						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
 							<i class="material-icons">arrow_forward</i>
 			  			</button>
-					</a>
-				` : ''}
+					</a> ` : ''}
 
-			</nav>
-		</div>
+	</nav>
+</div>

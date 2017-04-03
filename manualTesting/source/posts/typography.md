@@ -1,14 +1,15 @@
 ---
 title: Typography
-date: 2017-03-13 14:59:07
+date: 2017-04-04 14:59:07
 layout: post
 ---
 
 An illustration of typographic and markdown based features.
 
+<!-- more -->
+
 ![Type being set.](/images/typography.jpg)
 
-<!-- more -->
 
 # Header 1
 

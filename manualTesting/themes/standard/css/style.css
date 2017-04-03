@@ -365,8 +365,13 @@ figcaption {
   flex-grow: 1;
 }
 .content-wrapper {
-  max-width: 512px;
+  max-width: 100%;
+  width: 512px;
+  margin: 0 auto;
 }
 .blog__posts img {
   max-width: 100%;
+}
+.index .content-wrapper {
+  margin-top: 1rem;
 }

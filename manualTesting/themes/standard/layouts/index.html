@@ -1,5 +1,28 @@
-<ul>
-${page.posts.map(post => {
-	return `<li><h1><a href="${post.link}">${post.title}</a></h1>${post.excerpt ? post.excerpt : post.content}</li>`
-})}
-</ul>
+<div class="blog__posts mdl-grid index">
+${page.posts.map(post => `
+
+	<div class="mdl-card mdl-cell mdl-cell--12-col" >
+
+		<!-- Use the first image in a post or its headerImage as caption image -->
+		<div class="mdl-card__media mdl-color-text--grey-50" style="${(() => {
+					if(post.headerImage) return `background-image: url(${post.headerImage})`
+					let regex=/<\s*?img\s+[^>]*?\s*src\s*=\s*["']([^"']+)["'][^>]*?>/
+					return (regex.exec(post.content) === null) ? '' : `background-image: url(${regex.exec(post.content)[1]})`
+				})()}">
+			<h3><a href="${post.link}">${post.title}</a></h3>
+		</div>
+		<div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+			<div class="content-wrapper">
+				${post.excerpt ? post.excerpt : post.content}
+			</div>
+		</div>
+		<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+			<div class="minilogo"></div>
+			<div>
+				<strong>The Newist</strong>
+				<span>2 days ago</span>
+			</div>
+		</div>
+	</div>`
+)}
+</div>
