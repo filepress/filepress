@@ -22,21 +22,26 @@ At this point we really are at the starting line. Things that we will definitely
 	- [x] local preview
 		- [x] With live-reload
 - [ ] Standard theme
+	- [x] decide on theme
+	- [ ] single entry page
+	- [ ] index page
+	- [ ] archive page
+	- [ ] tags page
 - [ ] Work on core transforms
 	- [x] permalinks
 	- [x] buildIndex
+		- [ ] pagination option
 	- [x] themes
 	- [x] archive page
 	- [ ] tags page
 - [ ] Advanced logging
+- [ ] Create sub-packages
 - Document everything
 - [ ] Automated testing (tape)
 	- [ ] Be happy with manual testing
 	- [ ] Core transforms
+	- [ ] Core arrayTransforms
 	- [ ] Core utils
 	- [ ] CI
-- Discuss if things are done the best way
-
-Stuff for later:
-
-- Project website
+- [ ] Project website
+- Constantly discuss if things are done the best way

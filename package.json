@@ -13,6 +13,7 @@
     "markdown-it": "^6.1.1",
     "markdown-it-emoji": "^1.3.0",
     "markdown-it-footnote": "^3.0.1",
+    "markdown-it-implicit-figures": "^0.5.0",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "yamljs": "^0.2.7"
@@ -20,7 +21,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"dev-stylus": "stylus ./manualTesting/themes/standard/styl/style.styl --out ./manualTesting/themes/standard/css -w"
+    "dev-stylus": "stylus ./manualTesting/themes/standard/styl/style.styl --out ./manualTesting/themes/standard/css -w"
   },
   "bin": {
     "fp": "./bin/fp.js"

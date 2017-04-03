@@ -356,10 +356,17 @@ body .blog {
   background-color: #fff;
   box-sizing: border-box;
 }
+figcaption {
+  text-align: center;
+  margin-top: 0.4rem;
+}
 .copyright {
   text-align: center;
   flex-grow: 1;
 }
 .content-wrapper {
   max-width: 512px;
+}
+.blog__posts img {
+  max-width: 100%;
 }

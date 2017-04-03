@@ -6,6 +6,8 @@ layout: post
 
 An illustration of typographic and markdown based features.
 
+![Type being set.](/images/typography.jpg)
+
 <!-- more -->
 
 # Header 1

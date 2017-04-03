@@ -8,6 +8,10 @@ sourceFolder: source
 destinationFolder: dist
 draftFolder: draft
 
+# Manage markdown features
+markdown:
+  imageCaptions: true #Use alt text of images as captions.
+
 # Themes
 defaultLayout: post
 themesFolder: themes
