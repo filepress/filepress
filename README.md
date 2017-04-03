@@ -23,7 +23,7 @@ At this point we really are at the starting line. Things that we will definitely
 		- [x] With live-reload
 - [ ] Standard theme
 	- [x] decide on theme
-	- [ ] single entry page
+	- [x] single entry page
 	- [ ] index page
 	- [ ] archive page
 	- [ ] tags page

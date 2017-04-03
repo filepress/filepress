@@ -8,8 +8,12 @@
 		<div class="blog__posts mdl-grid">
 			<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-				<!-- Add header image here -->
-				<div class="mdl-card__media mdl-color-text--grey-50" style="">
+				<!-- Add header image here by finding the first, if any image in the pages content -->
+				<div class="mdl-card__media mdl-color-text--grey-50" style="${(() => {
+					if(page.headerImage) return `background-image: url(${page.headerImage})`
+					let regex=/<img[\s\S]*src="(.*)"[\s\s]*?>/
+					return (regex.exec(page.content) === null) ? '' : `background-image: url(${regex.exec(page.content)[1]})`
+				})()}">
 					<h3>${page.title}</h3>
 				</div>
 				<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
