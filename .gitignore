@@ -3,3 +3,5 @@ logs
 *.log
 npm-debug.log*
 manualTesting/dist
+package-lock.json
+.vscode

@@ -11,20 +11,21 @@ const excerpt = filepress.excerpt
 const buildArchive = filepress.buildArchive
 
 //Define a logger which can have it's formatting configured.
-const logger = (indents) => (obj) => {
-    console.log('logging:', JSON.stringify(obj, null, indents))
-    return obj
+const logger = (indents) => (objs) => {
+    console.log('logging:', JSON.stringify(objs, null, indents))
+    return objs
 }
 
 module.exports = () => {
 	filepress
-		.use(frontmatter())
-		.use(permalinks())
+		//.use(frontmatter())
+		.use(logger(2))
+	/*	.use(permalinks())
 		.use(markdown())
 		.use(excerpt())
-		.observe(buildIndex())
-		.observe(buildArchive())
+		.use(buildIndex())
+		.use(buildArchive())
 		.use(themes())
-		.use(write('./dist'))
+		.use(write('./dist'))*/
 		.start('./source')
 }
